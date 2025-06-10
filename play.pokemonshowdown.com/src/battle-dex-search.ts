@@ -905,9 +905,9 @@ abstract class BattleTypedSearch<T extends SearchType> {
 				console.log("Error: Unable to load learnset data for " + learnsetid + " in " + this.mod);
 			}
 
-			// Modified this function to account for pet mods with tradebacks enabled
-			const tradebacksMod = ['gen1expansionpack', 'gen1burgundy'];
-			if (learnset && (moveid in learnset) && (!(this.format.startsWith('tradebacks') || tradebacksMod.includes(this.mod)) ? learnset[moveid].includes(genChar) :
+			// Check if tradebacks enabled
+			const isTradebacks = window.ModConfig[this.mod].rbyTradebacks;
+			if (learnset && (moveid in learnset) && (!(this.format.startsWith('tradebacks') || isTradebacks) ? learnset[moveid].includes(genChar) :
 				(learnset[moveid].includes(genChar) ||
 					(learnset[moveid].includes(`${gen + 1}`) && move.gen === gen)))) {
 				return true;
@@ -1731,7 +1731,7 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 		const format = this.format;
 		const isHackmons = (format.includes('hackmons') || format.endsWith('bh'));
 		const isSTABmons = (format.includes('stabmons') || format.includes('stylemons')|| format === 'staaabmons');
-		const isTradebacks = (format.includes('tradebacks') || this.mod === 'gen1expansionpack' || this.mod === 'gen1burgundy');
+		const isTradebacks = (format.includes('tradebacks') || window.ModConfig[this.mod].rbyTradebacks);
 		const regionBornLegality = dex.gen >= 6 &&
 			(/^battle(spot|stadium|festival)/.test(format) || format.startsWith('bss') ||
 				format.startsWith('vgc') || (dex.gen === 9 && this.formatType !== 'natdex'));
