@@ -561,7 +561,7 @@ export class BattleScene implements BattleSceneStub {
 		let gen = this.battle.gen;
 		// Mod Graphics override
 		const modid = this.battle.dex.modid;
-		const customGraphics = window.ModConfig[modid].graphicsGen;
+		const customGraphics = (window.ModConfig[modid] && window.ModConfig[modid].graphicsGen) ? window.ModConfig[modid].graphicsGen : false;
 		if (customGraphics) gen = customGraphics;
 		// Respect prefs
 		if (Dex.prefs('nopastgens')) gen = 6;

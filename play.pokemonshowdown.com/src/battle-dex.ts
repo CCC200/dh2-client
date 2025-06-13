@@ -584,7 +584,8 @@ const Dex = new class implements ModdedDex {
 		//
 		let graphicsGen = mechanicsGen;
 		// Mod Graphics override
-		if (options.mod) graphicsGen = window.ModConfig[options.mod].graphicsGen;
+		const customGraphics = (options.mod && window.ModConfig[options.mod].graphicsGen) ? window.ModConfig[options.mod].graphicsGen : false;
+		if (customGraphics) graphicsGen = customGraphics;
 		// Respect prefs
 		if (Dex.prefs('nopastgens')) graphicsGen = 6;
 		if (Dex.prefs('bwgfx') && graphicsGen >= 6) graphicsGen = 5;

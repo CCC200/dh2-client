@@ -906,7 +906,7 @@ abstract class BattleTypedSearch<T extends SearchType> {
 			}
 
 			// Check if tradebacks enabled
-			const isTradebacks = window.ModConfig[this.mod].rbyTradebacks;
+			const isTradebacks = (window.ModConfig[this.mod] && window.ModConfig[this.mod].rbyTradebacks) ? window.ModConfig[this.mod].rbyTradebacks : false;
 			if (learnset && (moveid in learnset) && (!(this.format.startsWith('tradebacks') || isTradebacks) ? learnset[moveid].includes(genChar) :
 				(learnset[moveid].includes(genChar) ||
 					(learnset[moveid].includes(`${gen + 1}`) && move.gen === gen)))) {
@@ -1731,7 +1731,7 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 		const format = this.format;
 		const isHackmons = (format.includes('hackmons') || format.endsWith('bh'));
 		const isSTABmons = (format.includes('stabmons') || format.includes('stylemons')|| format === 'staaabmons');
-		const isTradebacks = (format.includes('tradebacks') || window.ModConfig[this.mod].rbyTradebacks);
+		const isTradebacks = (window.ModConfig[this.mod] && window.ModConfig[this.mod].rbyTradebacks) ? window.ModConfig[this.mod].rbyTradebacks : (format.includes('tradebacks')) ? true : false;
 		const regionBornLegality = dex.gen >= 6 &&
 			(/^battle(spot|stadium|festival)/.test(format) || format.startsWith('bss') ||
 				format.startsWith('vgc') || (dex.gen === 9 && this.formatType !== 'natdex'));
