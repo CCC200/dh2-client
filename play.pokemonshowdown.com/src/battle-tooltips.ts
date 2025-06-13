@@ -1704,6 +1704,7 @@ class BattleTooltips {
 		}
 
 		// 1/256 glitch
+		// Hardcode exemption added for colorplus mod
 		if (this.battle.gen === 1 && !toID(this.battle.tier).includes('stadium') && !toID(this.battle.mod).includes('colorplus')) {
 			value.set((Math.floor(value.value * 255 / 100) / 256) * 100);
 		}
