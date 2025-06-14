@@ -6,6 +6,7 @@ Config.bannedHosts = ['cool.jit.su', 'pokeball-nixonserver.rhcloud.com'];
 
 Config.whitelist = [
 	'wikipedia.org',
+	'sublvl.ddns.net',
 
 	// The full list is maintained outside of this repository so changes to it
 	// don't clutter the commit log. Feel free to copy our list for your own
@@ -18,10 +19,10 @@ Config.whitelist = [
 // `defaultserver` specifies the server to use when the domain name in the
 // address bar is `Config.routes.client`.
 Config.defaultserver = {
-	id: 'showdown',
-	host: 'sim3.psim.us',
-	port: 443,
-	httpport: 8000,
+	id: 'sublvl',
+	host: 'sublvl.ddns.net',
+	port: 8000,
+	httpport: 80,
 	altport: 80,
 	registered: true
 };
