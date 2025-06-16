@@ -1119,25 +1119,24 @@ class ModdedDex {
 			if (!data.tier && data.baseSpecies && toID(data.baseSpecies) !== id) {
 				data.tier = this.species.get(data.baseSpecies).tier;
 			}
-			// Patch this out because it disrupts isCosmeticForme
-			
-			// if (data.cosmeticFormes) {
-			// 	if (!table.BattleBaseSpeciesChart.includes(id)) table.BattleBaseSpeciesChart.push(id);
-			// 	for (const forme of data.cosmeticFormes) {
-			// 		if (toID(forme) === formid) {
-			// 			data = new Species(formid, name, {
-			// 				...data,
-			// 				name: forme,
-			// 				forme: forme.slice(data.name.length + 1),
-			// 				baseForme: "",
-			// 				baseSpecies: data.name,
-			// 				otherFormes: null,
-			// 			});
-			// 			table.BattlePokedexAltForms[formid] = data;
-			// 			break;
-			// 		}
-			// 	}
-			// }
+			// Fix applied so it doesn't disrupt isCosmeticForme
+			if (data.cosmeticFormes && !data.isCosmeticForme) {
+				if (!table.BattleBaseSpeciesChart.includes(id)) table.BattleBaseSpeciesChart.push(id);
+				for (const forme of data.cosmeticFormes) {
+					if (toID(forme) === formid) {
+						data = new Species(formid, name, {
+							...data,
+							name: forme,
+							forme: forme.slice(data.name.length + 1),
+							baseForme: "",
+							baseSpecies: data.name,
+							otherFormes: null,
+						});
+						table.BattlePokedexAltForms[formid] = data;
+						break;
+					}
+				}
+			}
 			if (data.gen > this.gen) data.tier = 'Illegal';
 			const species = new Species(id, name, data);
 			this.cache.Species[id] = species;
