@@ -570,8 +570,9 @@ export class BattleScene implements BattleSceneStub {
 		this.activeCount = this.battle.nearSide?.active.length || 1;
 
 		const isSPL = (typeof this.battle.rated === 'string' && this.battle.rated.startsWith("Smogon Premier League"));
+		const isFinals = (typeof this.battle.rated === 'string' && this.battle.rated.startsWith("Tournament Finals"));
 		let bg: string;
-		if (isSPL) {
+		if (isSPL || isFinals) {
 			if (gen <= 1) bg = 'fx/bg-gen1-spl.png';
 			else if (gen <= 2) bg = 'fx/bg-gen2-spl.png';
 			else if (gen <= 3) bg = 'fx/bg-gen3-spl.png';
