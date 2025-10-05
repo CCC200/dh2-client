@@ -1,4 +1,70 @@
 {
+  "Blissey": {
+    "Reflect": {
+      "moves": [
+        "Reflect",
+        [
+          "Thunder Wave",
+          "Sing"
+        ],
+        "Seismic Toss",
+        "Soft-Boiled"
+      ]
+    },
+    "BoltBeam": {
+      "moves": [
+        "Ice Beam",
+        "Thunderbolt",
+        "Soft-Boiled",
+        [
+          "Thunder Wave",
+          "Sing"
+        ]
+      ]
+    },
+    "Counter": {
+      "moves": [
+        "Counter",
+        "Soft-Boiled",
+        [
+          "Ice Beam",
+          "Seismic Toss"
+        ],
+        [
+          "Sing",
+          "Thunder Wave",
+          "Thunderbolt"
+        ]
+      ]
+    }
+  },
+  "Slowking": {
+    "Standard": {
+      "moves": [
+        "Amnesia",
+        "Rest",
+        [
+          "Surf",
+          "Psychic"
+        ],
+        [
+          "Thunder Wave",
+          "Reflect",
+          "Psychic"
+        ]
+      ]
+    }
+  },
+  "Machamp": {
+    "Wallbreaker": {
+      "moves": [
+        "Karate Chop",
+        "Body Slam",
+        "Hyper Beam",
+        "Earthquake"
+      ]
+    }
+  },
   "Raichu": {
     "Sleeper": {
       "moves": [
@@ -82,7 +148,7 @@
         [
           "Rest",
           "Counter",
-          "Submission"
+          "Karate Chop"
         ]
       ]
     }
@@ -139,7 +205,7 @@
         ],
         [
           "Hyper Beam",
-          "Mega Drain"
+          "Giga Drain"
         ]
       ]
     }
@@ -257,7 +323,7 @@
         [
           "Double-Edge",
           "Stun Spore",
-          "Mega Drain",
+          "Giga Drain",
           "Hyper Beam"
         ]
       ]
