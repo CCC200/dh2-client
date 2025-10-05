@@ -210,6 +210,30 @@ const Dex = new class implements ModdedDex {
 		if (!gen) return this;
 		return this.mod(`gen${gen}` as ID);
 	}
+	formatGen(format: string) {
+		const formatid = toID(format);
+		if (!formatid) return Dex.gen;
+		if (!formatid.startsWith('gen')) return 6;
+		return parseInt(formatid.charAt(3)) || Dex.gen;
+	}
+	forFormat(format: string) {
+		let dex = Dex.forGen(Dex.formatGen(format));
+		const formatid = toID(format).slice(4);
+		if (dex.gen === 7 && formatid.includes('letsgo')) {
+			dex = Dex.mod('gen7letsgo' as ID);
+		} else if (dex.gen === 8 && formatid.includes('bdsp')) {
+			dex = Dex.mod('gen8bdsp' as ID);
+		}
+		// MOD formats
+		else if(format.includes('colorplus')) {
+			return this.mod('colorplus' as ID);
+		}
+		else {
+			// Hack until I do this the right way in tiers
+			dex = Dex.forGen(Dex.formatGen(format));
+		}
+		return dex;
+	}
 
 	resolveAvatar(avatar: string): string {
 		if (window.BattleAvatarNumbers && avatar in BattleAvatarNumbers) {
