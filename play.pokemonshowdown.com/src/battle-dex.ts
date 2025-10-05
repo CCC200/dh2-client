@@ -228,6 +228,9 @@ const Dex = new class implements ModdedDex {
 		else if(format.includes('colorplus')) {
 			return this.mod('colorplus' as ID);
 		}
+		else if(format.includes('polishedcrystal')) {
+			return this.mod('polishedcrystal' as ID);
+		}
 		else {
 			// Hack until I do this the right way in tiers
 			dex = Dex.forGen(Dex.formatGen(format));
