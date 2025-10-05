@@ -1,0 +1,571 @@
+{
+  "Raichu": {
+    "Sleeper": {
+      "moves": [
+        "Sing",
+        "Thunderbolt",
+        "Surf",
+        [
+          "Hyper Beam",
+          "Body Slam",
+          "Thunder Wave"
+        ]
+      ]
+    }
+  },
+  "Nidoqueen": {
+    "Sleeper": {
+      "moves": [
+        "Lovely Kiss",
+        "Earthquake",
+        "Blizzard",
+        "Thunderbolt"
+      ]
+    }
+  },
+  "Nidoking": {
+    "Lovely Kiss": {
+      "moves": [
+        "Lovely Kiss",
+        "Blizzard",
+        "Thunderbolt",
+        "Earthquake"
+      ]
+    },
+    "Amnesia": {
+      "moves": [
+        "Amnesia",
+        "Blizzard",
+        "Thunderbolt",
+        "Earthquake"
+      ]
+    }
+  },
+  "Clefable": {
+    "Amnesia": {
+      "moves": [
+        "Amnesia",
+        [
+          "Blizzard",
+          "Psychic"
+        ],
+        [
+          "Body Slam",
+          "Thunderbolt"
+        ],
+        "Rest"
+      ]
+    }
+  },
+  "Persian": {
+    "Standard": {
+      "moves": [
+        "Hypnosis",
+        "Slash",
+        "Thunderbolt",
+        [
+          "Amnesia",
+          "Bubble Beam"
+        ]
+      ]
+    }
+  },
+  "Golduck": {
+    "Amnesia": {
+      "moves": [
+        "Amnesia",
+        "Hydro Pump",
+        [
+          "Blizzard",
+          "Ice Beam"
+        ],
+        [
+          "Rest",
+          "Counter",
+          "Submission"
+        ]
+      ]
+    }
+  },
+  "Alakazam": {
+    "Standard": {
+      "moves": [
+        "Psychic",
+        [
+          "Seismic Toss",
+          "Ice Punch",
+          "Thunder Punch"
+        ],
+        "Thunder Wave",
+        "Recover"
+      ]
+    }
+  },
+  "Victreebel": {
+    "Wrap": {
+      "moves": [
+        "Wrap",
+        "Razor Leaf",
+        [
+          "Sleep Powder",
+          "Stun Spore"
+        ],
+        [
+          "Stun Spore",
+          "Hyper Beam"
+        ]
+      ]
+    },
+    "Swords Dance": {
+      "moves": [
+        "Swords Dance",
+        "Hyper Beam",
+        "Razor Leaf",
+        [
+          "Sleep Powder",
+          "Stun Spore"
+        ]
+      ]
+    }
+  },
+  "Tentacruel": {
+    "Wrap": {
+      "moves": [
+        "Wrap",
+        "Surf",
+        [
+          "Blizzard",
+          "Swords Dance"
+        ],
+        [
+          "Hyper Beam",
+          "Mega Drain"
+        ]
+      ]
+    }
+  },
+  "Golem": {
+    "Standard": {
+      "moves": [
+        "Earthquake",
+        "Explosion",
+        [
+          "Rock Slide",
+          "Body Slam"
+        ],
+        [
+          "Body Slam",
+          "Fire Blast"
+        ]
+      ]
+    }
+  },
+  "Rapidash": {
+    "Sleeper": {
+      "moves": [
+        "Hypnosis",
+        "Fire Spin",
+        [
+          "Fire Blast",
+          "Body Slam"
+        ],
+        [
+          "Hyper Beam",
+          "Double Kick"
+        ]
+      ]
+    }
+  },
+  "Slowbro": {
+    "Standard": {
+      "moves": [
+        "Amnesia",
+        "Rest",
+        [
+          "Surf",
+          "Psychic"
+        ],
+        [
+          "Thunder Wave",
+          "Reflect",
+          "Psychic"
+        ]
+      ]
+    }
+  },
+  "Cloyster": {
+    "Standard": {
+      "moves": [
+        "Clamp",
+        "Explosion",
+        "Blizzard",
+        [
+          "Rest",
+          "Hyper Beam",
+          "Screech"
+        ]
+      ]
+    }
+  },
+  "Gengar": {
+    "Standard": {
+      "moves": [
+        "Hypnosis",
+        "Thunderbolt",
+        [
+          "Ice Punch",
+          "Night Shade"
+        ],
+        "Explosion"
+      ]
+    }
+  },
+  "Hypno": {
+    "Amnesia": {
+      "moves": [
+        "Amnesia",
+        "Psychic",
+        [
+          "Reflect",
+          "Ice Punch",
+          "Thunder Punch"
+        ],
+        [
+          "Rest",
+          "Thunder Wave",
+          "Hypnosis"
+        ]
+      ]
+    }
+  },
+  "Kingler": {
+    "Swords Dance": {
+      "moves": [
+        "Swords Dance",
+        "Hyper Beam",
+        "Body Slam",
+        "Crabhammer"
+      ]
+    }
+  },
+  "Exeggutor": {
+    "Standard": {
+      "moves": [
+        "Sleep Powder",
+        "Psychic",
+        "Explosion",
+        [
+          "Double-Edge",
+          "Stun Spore",
+          "Mega Drain",
+          "Hyper Beam"
+        ]
+      ]
+    }
+  },
+  "Rhydon": {
+    "Standard": {
+      "moves": [
+        "Earthquake",
+        "Body Slam",
+        [
+          "Rock Slide",
+          "Rest"
+        ],
+        "Substitute"
+      ]
+    }
+  },
+  "Chansey": {
+    "Reflect": {
+      "moves": [
+        "Reflect",
+        [
+          "Thunder Wave",
+          "Sing"
+        ],
+        "Seismic Toss",
+        "Soft-Boiled"
+      ]
+    },
+    "BoltBeam": {
+      "moves": [
+        "Ice Beam",
+        "Thunderbolt",
+        "Soft-Boiled",
+        [
+          "Thunder Wave",
+          "Sing"
+        ]
+      ]
+    },
+    "Counter": {
+      "moves": [
+        "Counter",
+        "Soft-Boiled",
+        [
+          "Ice Beam",
+          "Seismic Toss"
+        ],
+        [
+          "Sing",
+          "Thunder Wave",
+          "Thunderbolt"
+        ]
+      ]
+    }
+  },
+  "Seaking": {
+    "Double Dance": {
+      "moves": [
+        "Hyper Beam",
+        "Surf",
+        "Agility",
+        "Swords Dance"
+      ]
+    }
+  },
+  "Starmie": {
+    "Standard": {
+      "moves": [
+        "Recover",
+        "Thunder Wave",
+        [
+          "Blizzard",
+          "Surf",
+          "Thunderbolt"
+        ],
+        [
+          "Psychic",
+          "Thunderbolt"
+        ]
+      ]
+    }
+  },
+  "Mr. Mime": {
+    "Hypnosis": {
+      "moves": [
+        "Hypnosis",
+        "Thunderbolt",
+        "Psychic",
+        [
+          "Seismic Toss",
+          "Thunder Wave"
+        ]
+      ]
+    }
+  },
+  "Jynx": {
+    "Sleep Lead": {
+      "moves": [
+        "Lovely Kiss",
+        [
+          "Blizzard",
+          "Ice Beam"
+        ],
+        "Psychic",
+        "Rest"
+      ]
+    }
+  },
+  "Electabuzz": {
+    "Offensive": {
+      "moves": [
+        "Thunder Wave",
+        "Thunderbolt",
+        "Ice Punch",
+        "Rolling Kick"
+      ]
+    }
+  },
+  "Tauros": {
+    "The Bull": {
+      "moves": [
+        "Body Slam",
+        "Hyper Beam",
+        [
+          "Earthquake",
+          "Thunderbolt"
+        ],
+        [
+          "Blizzard",
+          "Surf"
+        ]
+      ]
+    }
+  },
+  "Gyarados": {
+    "Standard": {
+      "moves": [
+        "Hydro Pump",
+        "Hyper Beam",
+        "Body Slam",
+        [
+          "Thunderbolt",
+          "Blizzard"
+        ]
+      ]
+    }
+  },
+  "Lapras": {
+    "Standard": {
+      "moves": [
+        "Sing",
+        "Blizzard",
+        "Thunderbolt",
+        [
+          "Hyper Beam",
+          "Body Slam"
+        ]
+      ]
+    }
+  },
+  "Vaporeon": {
+    "Growth": {
+      "moves": [
+        "Growth",
+        "Surf",
+        "Acid Armor",
+        "Rest"
+      ]
+    }
+  },
+  "Jolteon": {
+    "Standard": {
+      "moves": [
+        "Thunderbolt",
+        "Double Kick",
+        "Thunder Wave",
+        [
+          "Rest",
+          "Growth"
+        ]
+      ]
+    }
+  },
+  "Porygon": {
+    "Bulky Support": {
+      "moves": [
+        "Recover",
+        "Thunder Wave",
+        "Ice Beam",
+        [
+          "Thunderbolt",
+          "Double-Edge",
+          "Hyper Beam"
+        ]
+      ]
+    }
+  },
+  "Aerodactyl": {
+    "Mixed Attacker": {
+      "moves": [
+        "Earthquake",
+        "Hyper Beam",
+        "Headbutt",
+        "Fire Blast"
+      ]
+    }
+  },
+  "Snorlax": {
+    "Offensive Sleeper": {
+      "moves": [
+        "Lovely Kiss",
+        "Body Slam",
+        [
+          "Earthquake",
+          "Hyper Beam"
+        ],
+        "Self-Destruct"
+      ]
+    },
+    "Mixed Attacker (Amnesia)": {
+      "moves": [
+        "Amnesia",
+        "Body Slam",
+        [
+          "Blizzard",
+          "Ice Beam"
+        ],
+        [
+          "Lovely Kiss",
+          "Self-Destruct",
+          "Rest"
+        ]
+      ]
+    },
+    "Reflect": {
+      "moves": [
+        "Body Slam",
+        "Reflect",
+        "Rest",
+        [
+          "Earthquake",
+          "Hyper Beam",
+          "Self-Destruct",
+          "Lovely Kiss"
+        ]
+      ]
+    },
+    "PhysLax (All-Out Attacker)": {
+      "moves": [
+        "Body Slam",
+        [
+          "Hyper Beam",
+          "Counter"
+        ],
+        [
+          "Earthquake",
+          "Counter"
+        ],
+        "Self-Destruct"
+      ]
+    }
+  },
+  "Articuno": {
+    "Sweeper": {
+      "moves": [
+        "Agility",
+        "Blizzard",
+        "Ice Beam",
+        "Hyper Beam"
+      ]
+    }
+  },
+  "Zapdos": {
+    "Agility": {
+      "moves": [
+        "Agility",
+        "Thunderbolt",
+        "Drill Peck",
+        "Thunder Wave"
+      ]
+    }
+  },
+  "Moltres": {
+    "AgiliSpin": {
+      "moves": [
+        "Agility",
+        "Fire Spin",
+        "Fire Blast",
+        "Hyper Beam"
+      ]
+    }
+  },
+  "Dragonite": {
+    "Wrap": {
+      "moves": [
+        "Wrap",
+        "Hyper Beam",
+        [
+          "Blizzard",
+          "Surf"
+        ],
+        [
+          "Thunder Wave",
+          "Agility"
+        ]
+      ]
+    }
+  }
+}
