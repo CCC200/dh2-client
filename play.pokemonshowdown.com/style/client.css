@@ -969,7 +969,7 @@ p.or:after {
 	color: #CCDDFF;
 }
 
-.pmbox {
+.pmbox, .pmfakebox {
 	width: 270px;
 	margin: 0 auto;
 	min-height: 2px;
