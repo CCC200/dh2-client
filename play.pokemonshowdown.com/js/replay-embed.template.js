@@ -28,30 +28,30 @@ function requireScript(url) {
 	document.head.appendChild(scriptEl);
 }
 
-linkStyle('http://sublvl.ddns.net/showdown/style/font-awesome.css?');
-linkStyle('http://sublvl.ddns.net/showdown/style/battle.css?a7');
-linkStyle('http://sublvl.ddns.net/showdown/style/replay.css?a7');
-linkStyle('http://sublvl.ddns.net/showdown/style/utilichart.css?a7');
+linkStyle('https://sublvl.ddns.net/showdown/style/font-awesome.css?');
+linkStyle('https://sublvl.ddns.net/showdown/style/battle.css?a7');
+linkStyle('https://sublvl.ddns.net/showdown/style/replay.css?a7');
+linkStyle('https://sublvl.ddns.net/showdown/style/utilichart.css?a7');
 
-requireScript('http://sublvl.ddns.net/showdown/js/lib/ps-polyfill.js');
-requireScript('http://sublvl.ddns.net/showdown/config/config.js?a7');
-requireScript('http://sublvl.ddns.net/showdown/js/lib/jquery-1.11.0.min.js');
-requireScript('http://sublvl.ddns.net/showdown/js/lib/lodash.compat.js');
-requireScript('http://sublvl.ddns.net/showdown/js/lib/html-sanitizer-minified.js');
-requireScript('http://sublvl.ddns.net/showdown/js/battle-sound.js');
-requireScript('http://sublvl.ddns.net/showdown/js/battledata.js?a7');
-requireScript('http://sublvl.ddns.net/showdown/data/pokedex-mini.js?a7');
-requireScript('http://sublvl.ddns.net/showdown/data/pokedex-mini-bw.js?a7');
-requireScript('http://sublvl.ddns.net/showdown/data/graphics.js?a7');
-requireScript('http://sublvl.ddns.net/showdown/data/pokedex.js?a7');
-requireScript('http://sublvl.ddns.net/showdown/data/moves.js?a7');
-requireScript('http://sublvl.ddns.net/showdown/data/abilities.js?a7');
-requireScript('http://sublvl.ddns.net/showdown/data/items.js?a7');
-requireScript('http://sublvl.ddns.net/showdown/data/teambuilder-tables.js?a7');
-requireScript('http://sublvl.ddns.net/showdown/data/mod-sprites.js?a7');
-requireScript('http://sublvl.ddns.net/showdown/data/mod-config.js?a7');
-requireScript('http://sublvl.ddns.net/showdown/js/battle-tooltips.js?a7');
-requireScript('http://sublvl.ddns.net/showdown/js/battle.js?a7');
+requireScript('https://sublvl.ddns.net/showdown/js/lib/ps-polyfill.js');
+requireScript('https://sublvl.ddns.net/showdown/config/config.js?a7');
+requireScript('https://sublvl.ddns.net/showdown/js/lib/jquery-1.11.0.min.js');
+requireScript('https://sublvl.ddns.net/showdown/js/lib/lodash.compat.js');
+requireScript('https://sublvl.ddns.net/showdown/js/lib/html-sanitizer-minified.js');
+requireScript('https://sublvl.ddns.net/showdown/js/battle-sound.js');
+requireScript('https://sublvl.ddns.net/showdown/js/battledata.js?a7');
+requireScript('https://sublvl.ddns.net/showdown/data/pokedex-mini.js?a7');
+requireScript('https://sublvl.ddns.net/showdown/data/pokedex-mini-bw.js?a7');
+requireScript('https://sublvl.ddns.net/showdown/data/graphics.js?a7');
+requireScript('https://sublvl.ddns.net/showdown/data/pokedex.js?a7');
+requireScript('https://sublvl.ddns.net/showdown/data/moves.js?a7');
+requireScript('https://sublvl.ddns.net/showdown/data/abilities.js?a7');
+requireScript('https://sublvl.ddns.net/showdown/data/items.js?a7');
+requireScript('https://sublvl.ddns.net/showdown/data/teambuilder-tables.js?a7');
+requireScript('https://sublvl.ddns.net/showdown/data/mod-sprites.js?a7');
+requireScript('https://sublvl.ddns.net/showdown/data/mod-config.js?a7');
+requireScript('https://sublvl.ddns.net/showdown/js/battle-tooltips.js?a7');
+requireScript('https://sublvl.ddns.net/showdown/js/battle.js?a7');
 
 var Replays = {
 	battle: null,
