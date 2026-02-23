@@ -28,10 +28,10 @@ function requireScript(url) {
 	document.head.appendChild(scriptEl);
 }
 
-linkStyle('http://191.101.232.116/style/font-awesome.css?');
-linkStyle('http://191.101.232.116/style/battle.css?a7');
-linkStyle('http://191.101.232.116/style/replay.css?a7');
-linkStyle('http://191.101.232.116/style/utilichart.css?a7');
+linkStyle('http://sublvl.ddns.net/showdown/style/font-awesome.css?');
+linkStyle('http://sublvl.ddns.net/showdown/style/battle.css?a7');
+linkStyle('http://sublvl.ddns.net/showdown/style/replay.css?a7');
+linkStyle('http://sublvl.ddns.net/showdown/style/utilichart.css?a7');
 
 requireScript('http://sublvl.ddns.net/showdown/js/lib/ps-polyfill.js');
 requireScript('http://sublvl.ddns.net/showdown/config/config.js?a7');
