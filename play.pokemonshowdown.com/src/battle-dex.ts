@@ -180,7 +180,7 @@ const Dex = new class implements ModdedDex {
 	pokeballs: string[] | null = null;
 
 	//TODO we might want to move this to something like data/petmods
-	readonly modResourcePrefix = 'https://raw.githubusercontent.com/CCC200/dh2/master/data/mods/';
+	readonly modResourcePrefix = 'https://raw.githubusercontent.com/CCC200/pokemon-showdown/master/data/mods/';
 
 
 	resourcePrefix = (() => {
