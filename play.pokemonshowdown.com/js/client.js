@@ -762,7 +762,11 @@ function toId() {
 					Config.server.port = 8000;
 					Config.server.https = false;
 				}
-				var protocol = (Config.server.port === 443 || Config.server.https) ? 'https' : 'http';
+				console.log("port after local check:");
+				console.log(Config.server.port);
+				var protocol = (Config.server.port === 443 || Config.server.port === 8443 || Config.server.https) ? 'https' : 'http';
+				console.log("config host:");
+				console.log(Config.server.host);
 				Config.server.host = $.trim(Config.server.host);
 				try {
 					if (Config.server.host === 'localhost') {

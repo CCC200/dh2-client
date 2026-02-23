@@ -21,7 +21,7 @@ Config.whitelist = [
 Config.defaultserver = {
 	id: 'sublvl',
 	host: 'sublvl.ddns.net',
-	port: 8000,
+	port: 8443,
 	httpport: 80,
 	altport: 80,
 	registered: true
