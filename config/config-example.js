@@ -23,7 +23,7 @@ Config.defaultserver = {
 	host: 'sublvl.ddns.net',
 	port: 8443,
 	httpport: 80,
-	altport: 80,
+	altport: 8000,
 	registered: true
 };
 
