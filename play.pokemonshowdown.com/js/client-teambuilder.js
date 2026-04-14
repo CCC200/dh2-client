@@ -2322,14 +2322,15 @@
 			buf += '</div>';
 
 			// MOD useDVs to limit IVs to 15 without using gen 2 stat calcs
+			var modDVs = (window.ModConfig[this.curTeam.mod] && window.ModConfig[this.curTeam.mod].useDVs) ? window.ModConfig[this.curTeam.mod].useDVs : false;
 			if (this.curTeam.gen > 2) {
-				if(window.ModConfig[this.curTeam.mod].useDVs)
+				if (modDVs)
 					buf += '<div class="col ivcol"><div><strong>DVs</strong></div>';
 				else
 					buf += '<div class="col ivcol"><div><strong>IVs</strong></div>';
 				if (!set.ivs) set.ivs = {};
 				for (var i in stats) {
-					if(window.ModConfig[this.curTeam.mod].useDVs) {
+					if(modDVs) {
 						if (set.ivs[i] === undefined || isNaN(set.ivs[i]) || set.ivs[i] > 15) set.ivs[i] = 15;
 						var val = '' + (set.ivs[i]);
 						buf += '<div><input type="number" name="iv-' + i + '" value="' + BattleLog.escapeHTML(val) + '" class="textbox inputform numform" min="0" max="15" step="1" /></div>';
@@ -2610,8 +2611,9 @@
 				var hpTypeX = 0;
 				var i = 1;
 				var stats = {hp: 31, atk: 31, def: 31, spe: 31, spa: 31, spd: 31};
+				var modDVs = (window.ModConfig[this.curTeam.mod] && window.ModConfig[this.curTeam.mod].useDVs) ? window.ModConfig[this.curTeam.mod].useDVs : false;
 				for (var s in stats) {
-					if (set.ivs[s] === undefined) set.ivs[s] = 31;
+					if (set.ivs[s] === undefined) set.ivs[s] = modDVs ? 15 : 31;
 					hpTypeX += i * (set.ivs[s] % 2);
 					i *= 2;
 				}
@@ -3276,6 +3278,7 @@
 		unChooseMove: function (moveName) {
 			var set = this.curSet;
 			if (!moveName || !set || this.curTeam.format === 'gen7hiddentype') return;
+			if (window.ModConfig[this.curTeam.mod] && window.ModConfig[this.curTeam.mod].useDVs) return;
 			if (moveName.substr(0, 13) === 'Hidden Power ') {
 				if (set.ivs) {
 					for (var i in set.ivs) {
@@ -3380,6 +3383,19 @@
 				if (minSpe === undefined && (!minAtk || gen < 3)) return;
 				set.ivs = {};
 			}
+			// MOD handle useDVs cases separately to avoid hidden power nonsense
+			var modDVs = (window.ModConfig[this.curTeam.mod] && window.ModConfig[this.curTeam.mod].useDVs) ? window.ModConfig[this.curTeam.mod].useDVs : false;
+			if (modDVs) {
+				if (minSpe)
+					set.ivs['spe'] = 0;
+				else
+					set.ivs['spe'] = 15;
+				if (minAtk)
+					set.ivs['atk'] = 0;
+				else
+					set.ivs['atk'] = 15;
+				return;
+			};
 			if (!set.ivs['spe'] && set.ivs['spe'] !== 0) set.ivs['spe'] = 31;
 			if (minSpe) {
 				// min Spe
@@ -3490,7 +3506,8 @@
 			if (!species || !species.exists) return 0;
 
 			if (!set.level) set.level = 100;
-			if (typeof set.ivs[stat] === 'undefined') set.ivs[stat] = 31;
+			var modDVs = (window.ModConfig[this.curTeam.mod] && window.ModConfig[this.curTeam.mod].useDVs) ? window.ModConfig[this.curTeam.mod].useDVs : false;
+			if (typeof set.ivs[stat] === 'undefined') set.ivs[stat] = modDVs ? 15 : 31;
 
 			var baseStat = species.baseStats[stat];
 			var iv = (set.ivs[stat] || 0);
