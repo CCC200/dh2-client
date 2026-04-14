@@ -2321,13 +2321,23 @@
 			}
 			buf += '</div>';
 
+			// MOD useDVs to limit IVs to 15 without using gen 2 stat calcs
 			if (this.curTeam.gen > 2) {
-				buf += '<div class="col ivcol"><div><strong>IVs</strong></div>';
+				if(window.ModConfig[this.curTeam.mod].useDVs)
+					buf += '<div class="col ivcol"><div><strong>DVs</strong></div>';
+				else
+					buf += '<div class="col ivcol"><div><strong>IVs</strong></div>';
 				if (!set.ivs) set.ivs = {};
 				for (var i in stats) {
-					if (set.ivs[i] === undefined || isNaN(set.ivs[i])) set.ivs[i] = 31;
-					var val = '' + (set.ivs[i]);
-					buf += '<div><input type="number" name="iv-' + i + '" value="' + BattleLog.escapeHTML(val) + '" class="textbox inputform numform" min="0" max="31" step="1" /></div>';
+					if(window.ModConfig[this.curTeam.mod].useDVs) {
+						if (set.ivs[i] === undefined || isNaN(set.ivs[i]) || set.ivs[i] > 15) set.ivs[i] = 15;
+						var val = '' + (set.ivs[i]);
+						buf += '<div><input type="number" name="iv-' + i + '" value="' + BattleLog.escapeHTML(val) + '" class="textbox inputform numform" min="0" max="15" step="1" /></div>';
+					} else {
+						if (set.ivs[i] === undefined || isNaN(set.ivs[i])) set.ivs[i] = 31;
+						var val = '' + (set.ivs[i]);
+						buf += '<div><input type="number" name="iv-' + i + '" value="' + BattleLog.escapeHTML(val) + '" class="textbox inputform numform" min="0" max="31" step="1" /></div>';
+					}
 				}
 				var hpType = '';
 				if (set.moves) {
