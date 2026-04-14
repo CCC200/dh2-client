@@ -1327,7 +1327,9 @@
 					}
 				}
 				if (this.curTeam.gen === 9) {
-					buf += '<span class="detailcell"><label>Tera Type</label>' + (species.forceTeraType || set.teraType || species.types[0]) + '</span>';
+					var displayTera = (window.ModConfig[this.curTeam.mod] && window.ModConfig[this.curTeam.mod].disableTeraTypes) ? !window.ModConfig[this.curTeam.mod].disableTeraTypes : true;
+					if(displayTera)
+						buf += '<span class="detailcell"><label>Tera Type</label>' + (species.forceTeraType || set.teraType || species.types[0]) + '</span>';
 				}
 			}
 			buf += '</button></div></div>';
@@ -2813,7 +2815,8 @@
 				buf += '</select></div></div>';
 			}
 
-			if (this.curTeam.gen === 9) {
+			var displayTera = (window.ModConfig[this.curTeam.mod] && window.ModConfig[this.curTeam.mod].disableTeraTypes) ? !window.ModConfig[this.curTeam.mod].disableTeraTypes : true;
+			if (this.curTeam.gen === 9 && displayTera) {
 				buf += '<div class="formrow"><label class="formlabel" title="Tera Type">Tera Type:</label><div>';
 				if (species.forceTeraType) {
 					buf += species.forceTeraType;
@@ -2937,7 +2940,9 @@
 					}
 				}
 				if (this.curTeam.gen === 9) {
-					buf += '<span class="detailcell"><label>Tera Type</label>' + (species.forceTeraType || set.teraType || species.types[0]) + '</span>';
+					var displayTera = (window.ModConfig[this.curTeam.mod] && window.ModConfig[this.curTeam.mod].disableTeraTypes) ? !window.ModConfig[this.curTeam.mod].disableTeraTypes : true;
+					if(displayTera)
+						buf += '<span class="detailcell"><label>Tera Type</label>' + (species.forceTeraType || set.teraType || species.types[0]) + '</span>';
 				}
 			}
 			this.$('button[name=details]').html(buf);
