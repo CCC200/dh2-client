@@ -3490,16 +3490,17 @@
 		getStat: function (stat, set, evOverride, natureOverride) {
 			var supportsEVs = !this.curTeam.format.includes('letsgo');
 			var supportsAVs = !supportsEVs;
+			var modDVs = (window.ModConfig[this.curTeam.mod] && window.ModConfig[this.curTeam.mod].useDVs) ? window.ModConfig[this.curTeam.mod].useDVs : false;
 			if (!set) set = this.curSet;
 			if (!set) return 0;
 
 			if (!set.ivs) set.ivs = {
-				hp: 31,
-				atk: 31,
-				def: 31,
-				spa: 31,
-				spd: 31,
-				spe: 31
+				hp: modDVs ? 15 : 31,
+				atk: modDVs ? 15 : 31,
+				def: modDVs ? 15 : 31,
+				spa: modDVs ? 15 : 31,
+				spd: modDVs ? 15 : 31,
+				spe: modDVs ? 15 : 31
 			};
 			if (!set.evs) set.evs = {};
 
@@ -3511,12 +3512,16 @@
 			if (!species || !species.exists) return 0;
 
 			if (!set.level) set.level = 100;
-			var modDVs = (window.ModConfig[this.curTeam.mod] && window.ModConfig[this.curTeam.mod].useDVs) ? window.ModConfig[this.curTeam.mod].useDVs : false;
 			if (typeof set.ivs[stat] === 'undefined') set.ivs[stat] = modDVs ? 15 : 31;
 
 			var baseStat = species.baseStats[stat];
 			var iv = (set.ivs[stat] || 0);
 			if (this.curTeam.gen <= 2) iv &= 30;
+			if(modDVs && iv > 15) {
+				set.ivs[stat] = 15;
+				iv = 15;
+			}
+			
 			var ev = set.evs[stat];
 			if (evOverride !== undefined) ev = evOverride;
 			if (ev === undefined) ev = (this.curTeam.gen > 2 ? 0 : 252);
