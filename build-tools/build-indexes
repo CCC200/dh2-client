@@ -1283,13 +1283,20 @@ function buildTeambuilderTables() {
 				const tier = species.tier;
 				overrideTier[species.id] = tier;
 				if (species.forme && JSON.stringify(modData.Pokedex[species.id]) === JSON.stringify(Dex.data.Pokedex[species.id]) && !ModConfig.showAllFormes) { // hardcode from main
-				if (
+					if (
 						[
 							'Aegislash', 'Castform', 'Cherrim', 'Cramorant', 'Eiscue', 'Meloetta', 'Mimikyu', 'Minior', 'Morpeko', 'Wishiwashi',
 						].includes(species.baseSpecies) || species.forme.includes('Totem') || species.forme.includes('Zen')
 					) {
 						continue;
 					}
+				}
+				// Block cosmetic formes that have illegal base formes
+				const dexSpecies = modData.Pokedex[species.id];
+				if(dexSpecies.isCosmeticForme) {
+					const baseTier = modDex.species.get(toID(dexSpecies.baseSpecies)).tier;
+					if(baseTier === 'Illegal')
+						continue;
 				}
 				if (!tierTable[tier]) tierTable[tier] = [];
 				tierTable[tier].push(id);
